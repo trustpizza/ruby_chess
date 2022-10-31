@@ -1,3 +1,5 @@
+require 'pry-byebug'
+
 class BoardRendererText
   attr_accessor :board
 
@@ -7,13 +9,15 @@ class BoardRendererText
 
   def render
     8.times do |r|
-      puts "---------------"
+      puts "  ---------------"
+      print "#{r} "
       8.times do |c|
         piece = board[[r, c]]
         print "#{board[[r, c]]} "
       end
       puts ""
     end
-    puts "---------------"
+    puts "  ---------------"
   end
 end
+
